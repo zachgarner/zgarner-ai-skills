@@ -1,0 +1,13 @@
+#!/bin/sh
+# Block commits whose staged notebooks fail the prose lint. Install (per clone):
+#   cp <this file> .git/hooks/pre-commit && chmod +x .git/hooks/pre-commit
+# Enforcement note: rules that live in tools get followed; rules that live in
+# discipline decay. This hook makes a lint failure uncommittable.
+lint=$(git rev-parse --show-toplevel)/templates/fintech_transaction_fm/zgarner-ai-skills/zgarner-prose/scripts/prose_lint.py
+[ -f "$lint" ] || exit 0
+fail=0
+for f in $(git diff --cached --name-only --diff-filter=d -- '*.ipynb'); do
+  python "$lint" "$(git rev-parse --show-toplevel)/$f" || fail=1
+done
+[ $fail -ne 0 ] && echo "pre-commit: prose_lint hits above — fix them or the commit stays blocked."
+exit $fail
