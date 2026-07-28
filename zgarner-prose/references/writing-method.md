@@ -60,6 +60,8 @@ The reader's eye lands on the first sentence, the last sentence, and the heading
 
 Zach: "you have a rule of thumb about the first sentence but arent using it." Positional rules can't be grepped and don't survive as vibes. Before shipping, extract every section's first and last sentence, state the section's claim in one line, and answer in writing "is sentence one that claim?" Problem statements, definitions, motivation, and background all FAIL even when the writing reads clean. If no written verdict table was produced, the review didn't happen.
 
+**The written audit covers every sentence, not only the openers and closers.** Body sentences get the same written label-and-verdict treatment; the position rules just differ by slot. Auditing the power positions in writing while eyeballing the body let a dash sandwich ship inside a sentence the author had just fixed (Zach, Jul 2026: "you need to go through each line, assess it, including its position in the paragraph/section").
+
 ## The review loop — iterate to fixpoint before any handover
 
 - **Pass A — high level.** What is this section FOR, in one sentence? Delete or move every paragraph that doesn't serve it. Check content ownership and duplication against the rest of the document.
@@ -134,7 +136,7 @@ Defines the new thing **by analogy to a known thing, in one breath** — no form
 ## Word tells
 
 - **Animate verbs for inanimate things.** Things do not "live," "ride along," "carry," "sit," or "come home" — they ARE and they're IN. "The details live in src/model.py" → "the details are in src/model.py."
-- **The term-of-art test: it buys precision the plain phrase lacks, or it goes.** "Shuffle" and "embarrassingly parallel" earn it (glossed at first use). "Corpus" fails — "training data" says the same thing to everyone (Zach: "it alienates people who arent specifically trained"). Also banned: "smoke test/run," "de-facto," verdict words (easy/hard) as information.
+- **The term-of-art test: it buys precision the plain phrase lacks, or it goes.** "Shuffle" and "embarrassingly parallel" earn it (glossed at first use). "Corpus" fails — "training data" says the same thing to everyone (Zach: "it alienates people who arent specifically trained"). Also banned: "smoke test/run," "de-facto," "upstream/downstream" (pipeline-direction jargon, Zach: "needlessly jargony" — name the actual part or stage instead: "in Parts 2 through 5," "the pretraining stage"), verdict words (easy/hard) as information.
 - **Jargon stacks.** "draws the seeded stratified sample" stacks three insider words; "picks 100K random rows, keeping the fraud rate the same as the whole set — the fixed seed picks the same rows every run" is actionable by anyone. Field verbs never appear without their plain meaning doing the work.
 - **Anthropomorphic gloss where a precise noun exists.** "The model's understanding of a transaction, written as numbers" was rejected for "the model's vector representation of a transaction." Use the standard noun and gloss it.
 

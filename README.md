@@ -13,6 +13,10 @@ directory.
   Zach's bar: label every sentence's job, put the claim in the power positions,
   ground titles in the concrete named system, and sweep for the tell catalog.
   Ships with `prose_lint.py` (mechanical tells + an `--openers` audit mode).
+- **[zgarner-fieldeng-template](zgarner-fieldeng-template/)** — the
+  notebook-specific layer on top of zgarner-prose for Anyscale demo templates:
+  what to show vs hide, Ray visibility, notebook structure, outputs, and the
+  collaboration protocol. Requires zgarner-prose.
 
 ## Install
 
