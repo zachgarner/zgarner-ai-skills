@@ -29,13 +29,13 @@ Zach: "Many things i've told you come down to this rule." That was Zach summariz
 
 Label every sentence by the job it does:
 
-- A **claim** asserts the section's point.
-- A **fact** states something checkable.
-- A **consequence** follows from a fact.
-- A **pointer** points to where something is defined or resolved.
-- A **gloss** defines a term where it appears.
-- An **instruction** tells the reader to do something.
-- A **deliverable** is the concrete result a section produces.
+- A **claim** is the point the section exists to assert. It is contestable and needs support. A fact does not.
+- A **fact** is a statement you can check. It argues nothing and stands alone. A claim does not.
+- A **consequence** follows from the sentence before it. On its own it is not yet true. A fact is.
+- A **gloss** gives a term's meaning where the term appears.
+- A **pointer** says where a meaning or artifact lives instead of giving it. A gloss gives it.
+- An **instruction** tells the reader to act. It is the only imperative job.
+- A **deliverable** is a concrete artifact the work produced. Unlike a fact, it is a thing made, not a statement checked.
 
 Then check two things.
 
@@ -91,6 +91,7 @@ Defines the new thing **by analogy to a known thing, in one breath** — no form
 - **The general engineer's level: the real word, then its plain meaning.** Textbook-speak fails ("Grouping is bound by data movement" — Zach: "is that like a bowel movement?"); dumbed-down fails too ("Grouping is hard" — easy/difficult carry no information; "plain doesn't mean dumbed down"). Target the claim an engineer would state at a whiteboard: term of art introduced in passing, concrete resource named, magnitude attached. "Grouping is limited by how fast you can move data around … nearly every row travels across the cluster network (data engineers call this a shuffle) … gigabytes here, terabytes at production scale."
 - **Connect the logical chain — no gap between goal and mechanism.** Goal → what that requires → the operation that provides it. If the reader could ask "what does that have to do with it?", the link is missing.
 - **One word per concept, held for the whole document.** Never "parts" in one place and "splits" in another; never "sequences" in output when the prose says "windows."
+- **Define by carving a boundary.** A definition that gives only the positive, with no line against the nearest neighbor, is distinctions without differences (Zach, Jul 2026). To define a term, say what it is and what separates it from the thing it sits closest to. You cannot define the positive without the negative.
 - **Define at the moment of understanding — never by forward reference.** Gloss a term in the sentence right after the reader has just understood the thing it names ("…the difference between its guess and the real token is the training signal. This is what makes the model *causal*: every prediction uses only the past."). Pointing at output that hasn't happened yet was rejected: "it's weird to explain something in the future."
 - **Affirmative framing is the default for EVERY sentence.** "No card depends on another" → "each card is independent" — same fact, stated as what IS. Negation makes the reader hold an absence. (Caught in a one-sentence insert after the rule existed — it was being applied only to openers.)
 - **Impact before mechanics — and mechanism-only facts may not deserve prose.** "X writes checkpoints to shared storage, so an interrupted run picks up" leads with plumbing; "X makes the run durable: if it's interrupted, it resumes from the last checkpoint" leads with what it does FOR the user. A fact with no user-felt impact belongs in a code comment, not prose.
