@@ -9,7 +9,15 @@ This skill attempts to codify Zach Garner's technical writing to condition Claud
 
 ## The umbrella principle: keep the reader in the loop
 
-Zach: "Many things i've told you come down to that rule." A multi-page document is one continuous experience. Every named thing creates curiosity, and every unresolved mention is a loose end. When you name an artifact, say where it gets opened. When a choice pays off later, say where. When a term appears, gloss it now or say where it's explained. The reader should never hold an unanswered question the document has an answer to without being told where that answer lives. Forward pointers are commitments — honor them when you write the later page.
+Zach: "Many things i've told you come down to that rule." 
+- A multi-page document is one continuous experience.
+- Every named thing creates curiosity, and every unresolved mention is a loose end.
+- When you name an artifact, say where it gets opened.
+- When a choice pays off later, say where.
+- When a term appears, gloss it now or say where it's explained.
+- The reader should never hold an unanswered question the document has an answer to without being told where that answer lives.
+- Forward pointers are commitments — honor them when you write the later page.
+- In journalism, this is referred to as "dont bury the lede".
 
 **Skimmability: this applies per page, not just in reading order** (Zach, Jul 2026). Real readers skim and land mid-document, so a term that is jargon to the reader must be glossed or linked at EACH page it appears on — you cannot assume they read the page where it was defined. "Umbrella" defined on the issues page and used bare on the sessions page reads fine top-to-bottom and breaks for a skimmer; the fix is "umbrella issue" plus a link to the definition. Review lens: read every page as if the reader arrived on it cold.
 
