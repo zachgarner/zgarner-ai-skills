@@ -45,6 +45,12 @@ RULES = [
     # semicolon and every doubled mark (two em-dashes, or a mark plus another).
     ("semicolon", re.compile(r";"), "md"),
     ("doubled-punctuation", re.compile(r"[—:;][^.!?\n]*[—:;]"), "md"),
+    # Buried-verb cleft (Zach, Jul 2026: "a common thing i flag"): "is what makes X
+    # comparable" hides the verb — give the actor the verb ("allows us to compare X").
+    # The definitional gloss "This is what makes the model causal" is endorsed, so a
+    # leading "this " is excluded.
+    ("buried-verb-cleft", re.compile(
+        r"(?<![Tt]his )\b(is|are) what (makes?|lets?|allows?|gives?|keeps?)\b", re.I), "both"),
     ("grandstand", re.compile(
         r"\b(the artifact every|is what makes .{0,40} possible|this is the moment|"
         r"the heart of|the whole (game|point|story) is)\b", re.I), "md"),
