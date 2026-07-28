@@ -62,6 +62,11 @@ Zach: "you have a rule of thumb about the first sentence but arent using it." Po
 
 **The written audit covers every sentence, not only the openers and closers.** Body sentences get the same written label-and-verdict treatment; the position rules just differ by slot. Auditing the power positions in writing while eyeballing the body let a dash sandwich ship inside a sentence the author had just fixed (Zach, Jul 2026: "you need to go through each line, assess it, including its position in the paragraph/section").
 
+**Two checks the audit runs with the author's knowledge switched off** (added after "the foundation model gets scored on the job it was built for" passed two audits, Jul 2026):
+
+- **The referent test.** For every claim, quote the concrete noun it asserts, from the sentence itself. "Scored on the job it was built for" fails: the job — fraud detection — is not in the sentence. The author's memory fills gaps the reader's can't, so grade only what is on the page.
+- **The successor test.** Delete the next sentence and ask whether this one still has a job. A sentence that only works as the ramp to its neighbor is punchline setup, whatever its grammar. The job-label audit is sentence-local and staging is pairwise, so this is the check that sees it.
+
 ## The review loop — iterate to fixpoint before any handover
 
 - **Pass A — high level.** What is this section FOR, in one sentence? Delete or move every paragraph that doesn't serve it. Check content ownership and duplication against the rest of the document.
