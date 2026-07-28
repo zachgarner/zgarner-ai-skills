@@ -27,7 +27,9 @@ The failure mode is hiding the lesson inside an incidental wrapper: a clean-look
 
 ## The intro pattern
 
-Recap first, at an altitude a returning reader absorbs without homework ("Previously in Part 2, we built the train/validation/test splits" — not detail they must remember). Then why this notebook exists, then the roadmap in one or two sentences. When notebooks form a group, the intro places the reader in the group (recap → this notebook's role in the arc → the later pointer). Content ownership applies to intros too — a recurring-cost sentence was cut from an intro because Scaling factors owned recurrence.
+Recap first, at an altitude a returning reader absorbs without homework ("Previously in Part 2, we built the train/validation/test splits" — not detail they must remember). Then why this notebook exists, then the roadmap in one or two sentences.
+
+**Lead with what we build, not what we compare against** (Zach, Jul 2026). When a notebook benchmarks against a named competitor, the build is the story and the comparison is the measurement protocol. A lead section framed as the comparison ("What we're comparing") reads as a grudge; frame it as the thing built ("Three fraud detectors") and position the competitor as context — "the first public blueprint, the base this series builds on." Results sections may still headline the beat; the lead may not. When notebooks form a group, the intro places the reader in the group (recap → this notebook's role in the arc → the later pointer). Content ownership applies to intros too — a recurring-cost sentence was cut from an intro because Scaling factors owned recurrence.
 
 ## Sections
 
