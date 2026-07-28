@@ -73,6 +73,8 @@ Zach: "you have a rule of thumb about the first sentence but arent using it." Po
 - **Pass B — sentence by sentence.** The written job-label audit, then every sentence against the tells. The first and last sentence of each paragraph get audited hardest. The first and second words are the power words.
 - **Pass C — high level again.** Flow intact, no new seams, no orphaned references, openers and closers still the strongest sentences.
 
+**A replacement sentence goes through the same audit as the sentence it replaced.** Most repeat offenses ship inside fixes: the correction is written last and reviewed never (Jul 2026 — a jargon-pile fix came back passive, with a colon, describing the future).
+
 Repeat A→B→C until one full cycle produces zero changes. Log what each pass caught. A loop that catches nothing on its first cycle probably wasn't run.
 
 ## Sweep, don't spot-fix
