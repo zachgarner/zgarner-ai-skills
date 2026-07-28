@@ -27,12 +27,12 @@ Zach: "Many things i've told you come down to this rule." That was Zach summariz
 
 ## Validate sentences by their JOB, not against a blacklist
 
-The tells (Part 3) are a blacklist, and a sentence can dodge every named tell and still be empty. The actual validation (Zach: "is that why you dont validate your sentences?"): give every sentence a label for the job it does — **claim, fact, consequence, pointer, gloss, or instruction** — then check two things:
+Label every sentence by the job it does. The jobs are claim, fact, consequence, pointer, gloss, and instruction. Then check two things.
 
 1. **The label fits the position.** A section opens with a claim. A body sentence is a fact or a consequence. A closer is a deliverable or a pointer.
-2. **The content fills the label.** A claim actually claims the section's point; a fact is checkable.
+2. **The content fills the label.** A claim actually claims the section's point. A fact is checkable.
 
-A sentence that takes no label has no job — cut it. The named tells are the common ways a sentence fakes a job: a sandwich is a verdict posing as a fact, a dash inventory is detail posing as part of a claim, a grandstand is importance posing as content. Label first; the blacklist is cleanup.
+A sentence that takes no label has no job. Cut it. This beats scanning a list of banned patterns. A sentence can dodge every banned pattern and still be empty. The patterns are the common ways a sentence fakes a job. A sandwich is a verdict posing as a fact. A dash inventory is detail posing as part of a claim. A grandstand is importance posing as content. Label first. The pattern list is only cleanup. Zach: "is that why you dont validate your sentences?"
 
 ## First and last sentences are power positions
 
