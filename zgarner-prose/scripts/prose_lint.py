@@ -40,6 +40,11 @@ RULES = [
         r"\b(with one (big )?difference|but here's the (catch|twist)|the catch is)\b", re.I), "both"),
     ("punctuation-pile", re.compile(
         r"[^.!?]*:[^.!?]*\([^)]*\)[^.!?]*;"), "md"),
+    # Earned punctuation (Zach, Jul 2026): every em-dash, colon, and especially
+    # semicolon must be earned; multiples in one sentence are a pile. Flag every
+    # semicolon and every doubled mark (two em-dashes, or a mark plus another).
+    ("semicolon", re.compile(r";"), "md"),
+    ("doubled-punctuation", re.compile(r"[—:;][^.!?\n]*[—:;]"), "md"),
     ("grandstand", re.compile(
         r"\b(the artifact every|is what makes .{0,40} possible|this is the moment|"
         r"the heart of|the whole (game|point|story) is)\b", re.I), "md"),
