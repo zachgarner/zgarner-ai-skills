@@ -18,7 +18,7 @@ Zach: "Many things i've told you come down to this rule." That was Zach summariz
 - When a choice pays off later, say where.
 - When a term appears, gloss it now or say where it's explained.
 - The reader should never hold an unanswered question the document has an answer to without being told where that answer lives.
-- Forward pointers are commitments — honor them when you write the later page.
+- Forward pointers are commitments. Honor them when you write the later page.
 
 **Skimmability: this applies per page, not just in reading order** (Zach, Jul 2026). Real readers skim and land mid-document, so a term that is jargon to the reader must be glossed or linked at EACH page it appears on. In general, you cannot assume they read the page where it was defined. 
   - (Side note: This parallels Will Tavlin's "Casual Viewing" criticism of Netflix: shows are now produced for a distracted, half-watching audience, where each scene re-contextualizes itself because no one is assumed to have followed the last one. But seriously, dont make it hard for a reader to jump in mid-stream and know where we are and where we're going) 
@@ -39,42 +39,42 @@ Label every sentence by the job it does:
 
 Then check two things.
 
-1. **The label fits the position.** A section opens with a claim. A body sentence is a fact or a consequence. A closer is a deliverable or a pointer.
+1. **The label fits the position.** A section opens with a claim. A body sentence is a fact or a consequence. The last sentence is a deliverable or a pointer.
 2. **The content fills the label.** A claim actually claims the section's point. A fact is checkable.
 
 A sentence that takes no label has no job. Cut it. A sentence can also have the right label and still be empty. The common ways a sentence fakes its job have names. A sandwich is a verdict posing as a fact. A dash inventory is detail posing as part of a claim. A grandstand is importance posing as content. Label first. Those patterns are only the cleanup pass. Zach: "is that why you dont validate your sentences?"
 
 ## First and last sentences are power positions
 
-The reader's eye lands on openings, closings, and headings — put the point there.
+The reader's eye lands on the first sentence, the last sentence, and the headings, so put the point in those spots. The first sentence is the opener. The last is the closer.
 
 - **A power sentence is grounded, active-voice, and states the point.** It's bad to open with "We watch two numbers". It is active-voice, but names nothing concrete (which two numbers?) and holds back the point, announcing that content is coming instead of stating it. If it were the only sentence the reader saw, did they learn anything?
 - **The skim test.** A power sentence lands even skimmed. Read only the first few words and the last few words. If the point already landed, it is a power sentence. If you had to read the middle to get it, the point is buried (Zach, Jul 2026).
 - **Truth is not sufficient.** It's bad to open with "Training prints two numbers per epoch". The sentence is literally true, but it inventories the content instead of delivering it. Any opener whose job is counting or listing what follows gets cut.
 - **The opener must be the section's claim.** A sentence can be strong and true and still be the wrong opener. It's bad to open with "Embedding cost is linear in the transaction count" when linearity is a side property and the section is about something else. The test is whether the sentence is THE section's claim, not whether it is a strong sentence.
-- **Open on the claim, not the backstory.** The first sentence is the decision or the point itself. Opening on the tension or the motivation is setup, and setup is bad even when it is skeeze-free. Move the motivation to a later sentence.
+- **Open with the claim, not the lead-up to it.** The opener is the decision or the point itself. Starting with the tension, the motivation, or the background delays the point, and that is bad even when the sentence reads clean. Move that context to a later sentence.
 - **Close on the strongest concrete fact.** The last sentence is a power position, so it earns its place or it goes. It's bad to end on a minor detail, a because-tail, or an aphorism. A closing line that reads like a code comment belongs in the code, so move it there.
-- **No sentence exists to set up another.** Framing a contrast, building to a reveal, seeding a punchline — staging, regardless of grammar. Zach: "I dont punchline setup anything. I speak plainly. I use power sentences." Put the facts adjacent and let the difference speak: "NVIDIA's notebook trains a 30-step demonstration and downloads its real weights. Ours trains the full ~16,000 steps."
+- **No sentence exists to set up another.** Framing a contrast, building to a reveal, or seeding a punchline is staging, whatever the grammar. Zach: "I dont punchline setup anything. I speak plainly. I use power sentences." Put the facts next to each other and let the difference speak. "NVIDIA's notebook trains a 30-step demonstration and downloads its real weights. Ours trains the full ~16,000 steps."
 
 ## The section-opener audit is a mandatory, WRITTEN step
 
-Zach: "you have a rule of thumb about the first sentence but arent using it." Positional rules can't be grepped and don't survive as vibes. Before shipping, extract every section's first and last sentence, state the section's claim in one line, and answer in writing "is sentence one that claim?" Problem statements, definitions, motivation, and backstory all FAIL even when skeeze-free. If no written verdict table was produced, the review didn't happen.
+Zach: "you have a rule of thumb about the first sentence but arent using it." Positional rules can't be grepped and don't survive as vibes. Before shipping, extract every section's first and last sentence, state the section's claim in one line, and answer in writing "is sentence one that claim?" Problem statements, definitions, motivation, and background all FAIL even when the writing reads clean. If no written verdict table was produced, the review didn't happen.
 
 ## The review loop — iterate to fixpoint before any handover
 
-- **Pass A — high level.** What is this section FOR, in one sentence? Delete or move every paragraph that doesn't serve it; check content ownership and duplication against the rest of the document.
-- **Pass B — sentence by sentence.** The written job-label audit, then every sentence against the tells. First and last sentence of each paragraph audited hardest — first and second words are power words.
+- **Pass A — high level.** What is this section FOR, in one sentence? Delete or move every paragraph that doesn't serve it. Check content ownership and duplication against the rest of the document.
+- **Pass B — sentence by sentence.** The written job-label audit, then every sentence against the tells. The first and last sentence of each paragraph get audited hardest. The first and second words are the power words.
 - **Pass C — high level again.** Flow intact, no new seams, no orphaned references, openers and closers still the strongest sentences.
 
-Repeat A→B→C until one full cycle produces zero changes. Log what each pass caught — a loop that catches nothing on its first cycle probably wasn't run.
+Repeat A→B→C until one full cycle produces zero changes. Log what each pass caught. A loop that catches nothing on its first cycle probably wasn't run.
 
 ## Sweep, don't spot-fix
 
-When the reviewer flags a sentence pattern, the flagged sentence is never the only instance. Fix it, then re-scan the whole document for the same pattern before handing back. Making the reviewer repeat a correction is the fastest way to burn their patience — they are teaching a rule, not editing a line.
+When the reviewer flags a sentence pattern, the flagged sentence is never the only instance. Fix it, then re-scan the whole document for the same pattern before handing back. Making the reviewer repeat a correction is the fastest way to burn their patience. They are teaching a rule, not editing a line.
 
 ## Run `prose_lint.py` before every hand-back
 
-`scripts/prose_lint.py <file.ipynb>` greps markdown and code comments for the mechanical tells. Zero hits or fix them. It cannot judge positions or altitude — the written audit still runs by hand.
+`scripts/prose_lint.py <file.ipynb>` greps markdown and code comments for the mechanical tells. Zero hits or fix them. It cannot judge positions or altitude. The written audit still runs by hand.
 
 ---
 
