@@ -9,10 +9,10 @@ This skill attempts to codify Zach Garner's technical writing to condition Claud
 
 ## The umbrella principle: keep the reader in the loop
 
-Zach: "Many things i've told you come down to this rule." Keep the reader in the loop. In journalism, this is referred to as "dont bury the lede".
-- A multi-page document is one continuous experience.
-- Every named thing creates curiosity, and every unresolved mention is a loose end.
-- When you name an artifact, say where it gets opened.
+Zach: "Many things i've told you come down to this rule." That was Zach summarizing a large number of corrections. **Keep the reader in the loop.** In journalism, this is referred to as "**dont bury the lede**".
+- A multi-page document is one continuous experience. It's cinematic.
+- Every named thing creates curiosity, and every unresolved mention is a loose end. (In Cinema, this is Chekhov's gun).
+-- When you name an artifact, say where it gets opened.
 - When a choice pays off later, say where.
 - When a term appears, gloss it now or say where it's explained.
 - The reader should never hold an unanswered question the document has an answer to without being told where that answer lives.
