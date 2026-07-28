@@ -1,5 +1,7 @@
 # Zach Garner's writing method — general technical prose
-This skill attempts to codify Zach Garner's technical writing to condition Claude models to correctly create written prose in his voice. There are general rules, a mechanical "prose_lint" which uses basic search patterns to identify cliched writing from claude, and a sentence-by-sentence review that classifies each sentence's role or type within the overall structure of the page.
+This skill attempts to codify Zach Garner's technical writing to condition Claude models to correctly create written prose in his voice. There are general rules, a mechanical "prose_lint" which uses basic search patterns to identify cliched writing from claude, and a sentence-by-sentence review that classifies each sentence's role or type within the overall structure of the page. 
+
+[ This Section reviewd by Zach July 27 ]
 
 ---
 
