@@ -170,6 +170,7 @@ Don't claim the product shines where it's undifferentiated — and don't volunte
 - **First mention of a name: "X is/does Y."** "FinancialTabularTokenizer is NVIDIA's tokenizer: it converts transactions to tokens and back." Never describe the operation while leaving the actor undefined.
 - **Answer at the line that raises the question**, and no comment whose truth expires within its own cell (laziness explained at the call that triggers execution, not three lines earlier).
 - **Provenance-and-move-on for standard concepts**: "Same as NVIDIA's blueprint, basic stuff for transformers." beats re-teaching AdamW.
+- **In instructional code, names are prose — write them in spoken words.** `ds_cfg` is "opaque as fuck" (Zach, Jul 2026) where `scale_config` reads aloud; a config key named `resources` is generic where `hardware` says the thing, the way `use_gpu` already does. Abbreviations and generic nouns are fine in library internals and ick in a cell a learner reads.
 - **Names read from the call site with honest provenance.** `normalize_batch` is a black box; `normalize_date_column` isn't. "add_" implied invention where "normalize_" said derived-from-existing. If a reviewer stops to ask what a function is, the name is wrong.
 - Zach's model comment, the reference register: `# Clean up and write out the split metadata to split_meta.json.` Subject, verb, object, done.
 
