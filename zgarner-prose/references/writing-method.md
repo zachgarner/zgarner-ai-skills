@@ -48,7 +48,7 @@ A sentence that takes no label has no job. Cut it. A sentence can also have the 
 
 The reader's eye lands on openings, closings, and headings — put the point there.
 
-- **Power means the claim itself, not the active-voice form.** It's bad to open with "We watch two numbers". The sentence is short, active, and We-led, but it only announces that content is coming instead of delivering it. That is skeeze. If it were the only sentence the reader saw, did they learn the thing?
+- **A power sentence names the concrete thing and states the point, not just active voice.** It's bad to open with "We watch two numbers". It is active-voice, but it names nothing concrete. Which two numbers? It also holds back the point, announcing that content is coming instead of naming the numbers and saying why they matter. If it were the only sentence the reader saw, did they learn anything?
 - **Truth is not sufficient.** It's bad to open with "Training prints two numbers per epoch". The sentence is literally true, but it inventories the content instead of delivering it. Any opener whose job is counting or listing what follows gets cut. The structure shows itself.
 - **A power sentence fails if it is the wrong claim.** It's bad to open with "Embedding cost is linear in the transaction count". The sentence is strong and true, but linearity was a property, not the section's point. The opener test is whether the sentence is THE section's claim, not whether it is strong.
 - **Backstory openers fail even when skeeze-free.** Opening on the tension or motivation is still setup. The first sentence is the claim or decision itself; motivation moves to a later sentence.
