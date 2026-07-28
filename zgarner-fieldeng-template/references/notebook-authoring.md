@@ -102,7 +102,7 @@ What the reader does next, in words they already own. No class names, no magic n
 
 1. `git diff` the file; wip-commit what's on disk.
 2. Write, re-loading at write time.
-3. Run the `zgarner-prose` review loop to fixpoint, including the written job-label audit.
+3. Run the `zgarner-prose` review loop to fixpoint. The written audit is not optional and not from memory: generate the worksheet with `prose_lint.py --audit <nb>` and fill every row — the discipline-gated step failed three times in one day until it became a tool step.
 4. Run `prose_lint.py` on the notebook, and `--imports` when code changed. Zero hits or fix them.
 5. Verify: papermill at mini by its own exit + error-cell scan; bit-match when validated code moved; graft curated outputs.
 6. Commit and push immediately.

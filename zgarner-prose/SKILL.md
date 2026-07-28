@@ -10,7 +10,7 @@ General technical writing to Zach's bar. The method is how he understands, not o
 Two load-bearing pieces:
 
 1. **`references/writing-method.md`** — read fully before writing anything for him. Part 1 is the method (job-label sentence validation, power positions, the written opener audit, the review loop, sweep-don't-spot-fix); Parts 2–5 are voice, the tell catalog, truth, and comment craft; Part 6 is where the rules do NOT apply.
-2. **`scripts/prose_lint.py <file.ipynb>`** — greps the mechanical tells in markdown and code comments. Run before every hand-back; zero hits or fix them. (`--imports` mode is used by the template skill's show-or-hide audit.)
+2. **`scripts/prose_lint.py <file.ipynb>`** — greps the mechanical tells in markdown and code comments. Run before every hand-back; zero hits or fix them. (`--imports` runs the show-or-hide audit; `--audit` emits the per-sentence worksheet the written review fills in; `--openers` does the same for HTML docs.)
 
 ## The method, in one line
 

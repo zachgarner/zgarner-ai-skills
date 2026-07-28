@@ -183,10 +183,46 @@ def audit_openers(path):
         print("claim   : ____________________   verdict(S1=claim?): ___\n")
 
 
+def audit_notebook(nb_path):
+    """Emit the mandatory written audit worksheet for a notebook: every markdown
+    sentence, numbered, with blank label and verdict columns. The review is filling
+    this in — label (claim/fact/consequence/gloss/pointer/instruction/deliverable),
+    label-fits-position, content-fills-label with the referent and successor tests.
+    A hand-back without the filled worksheet is a review that didn't happen.
+    Usage: prose_lint.py --audit <nb.ipynb>"""
+    nb = json.load(open(nb_path))
+    print(f"# SENTENCE AUDIT — {nb_path}")
+    print("# label: claim|fact|consequence|gloss|pointer|instruction|deliverable")
+    print("# verdict: position fits? content fills? referent quoted? survives successor deletion?\n")
+    n = 0
+    for c in nb.get("cells", []):
+        if c.get("cell_type") != "markdown":
+            continue
+        for block in "".join(c.get("source", [])).split("\n"):
+            block = block.strip()
+            if not block or block.startswith(("|", "<", "---")):
+                continue
+            if block.startswith("#"):
+                print(f"\n== {block.lstrip('# ')}")
+                continue
+            for sent in re.split(r"(?<=[.!?])\s+", block):
+                sent = sent.strip()
+                if not sent:
+                    continue
+                n += 1
+                print(f"{n:3d}. {sent}")
+                print("     label: ______  verdict: ______")
+    print(f"\n# {n} sentences — every row gets a label and a verdict before hand-back.")
+
+
 def main(paths):
     if paths and paths[0] == "--imports":
         for p in paths[1:]:
             audit_imports(p)
+        return 0
+    if paths and paths[0] == "--audit":
+        for p in paths[1:]:
+            audit_notebook(p)
         return 0
     if paths and paths[0] == "--openers":
         for p in paths[1:]:
