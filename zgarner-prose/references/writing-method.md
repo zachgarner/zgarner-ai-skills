@@ -20,7 +20,7 @@ Zach: "Many things i've told you come down to this rule." That was Zach summariz
 - The reader should never hold an unanswered question the document has an answer to without being told where that answer lives.
 - Forward pointers are commitments — honor them when you write the later page.
 
-**Skimmability: this applies per page, not just in reading order** (Zach, Jul 2026). Real readers skim and land mid-document, so a term that is jargon to the reader must be glossed or linked at EACH page it appears on — you cannot assume they read the page where it was defined. 
+**Skimmability: this applies per page, not just in reading order** (Zach, Jul 2026). Real readers skim and land mid-document, so a term that is jargon to the reader must be glossed or linked at EACH page it appears on — you cannot assume they read the page where it was defined. This parallels Will Tavlin's "Casual Viewing" criticism of Netflix: shows produced for a distracted, half-watching audience, where each scene re-contextualizes itself because no one is assumed to have followed the last one. 
 - A real example, from the LifeOps guides: an *umbrella issue* is a parent GitHub issue that holds a feature's sub-issues. The guide defines it on the issue-process page, then uses it bare on the sessions page. It reads fine as an epic read from top to bottom, but breaks down for someone who skims straight into the sessions page cold. The fix is to write "umbrella issue" with a link back to its definition every place it appears. Review lens: read every page as if the reader arrived on it cold.
 
 ## Validate sentences by their JOB, not against a blacklist
