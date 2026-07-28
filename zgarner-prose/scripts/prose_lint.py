@@ -59,7 +59,16 @@ def lint_notebook(path):
         src = "".join(c.get("source", []))
         if c.get("cell_type") == "markdown":
             for ln, line in enumerate(src.splitlines(), 1):
+                # HTML markup lines (badges, divs): entities like &nbsp; and attribute
+                # colons are markup, not prose — skip them entirely.
+                if re.match(r"\s*<\w+[\s>]", line):
+                    continue
+                # Headings keep the word rules but skip the punctuation rules: the
+                # series title format ("... — Part N: ...") is layout, not a sentence.
+                heading = line.lstrip().startswith("#")
                 for name, rx, scope in RULES:
+                    if heading and name in ("semicolon", "doubled-punctuation"):
+                        continue
                     if scope in ("md", "both") and rx.search(line):
                         hits.append((path, cid, f"md:{ln}", name, line.strip()[:90]))
         elif c.get("cell_type") == "code":
