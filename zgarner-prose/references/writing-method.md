@@ -179,7 +179,7 @@ Don't claim the product shines where it's undifferentiated — and don't volunte
 - **A colon survives when its left half is content** (Zach's own: "This job has two main steps: grouping the rows by card, then tokenizing each card.").
 - **A term of art survives when the plain phrase loses information** — then it MUST be glossed at first use.
 - **A power sentence fails if it is the wrong claim** — strength of form never substitutes for being the point.
-- **A single em-dash aside per paragraph is acceptable**; two in one sentence is sandwich/pile territory. *(Inferred from acceptance, not stated.)*
+- **No rule endorses em-dash asides.** An earlier note here said one aside per paragraph is acceptable — that was inferred by Claude, never stated, and Zach revoked it (Jul 2026: "when did i say to use asides??"). A dash survives only under the earned-punctuation bar, and in his register that is rare. Two in one sentence is always a sandwich.
 - **Rhetorical questions in body prose: unresolved** — question titles are banned; body questions have been avoided rather than ruled on. *(Inferred.)*
 
 ---
