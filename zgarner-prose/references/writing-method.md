@@ -19,7 +19,7 @@ Zach: "Many things i've told you come down to this rule." Keep the reader in the
 - Forward pointers are commitments — honor them when you write the later page.
 
 **Skimmability: this applies per page, not just in reading order** (Zach, Jul 2026). Real readers skim and land mid-document, so a term that is jargon to the reader must be glossed or linked at EACH page it appears on — you cannot assume they read the page where it was defined. 
-- A Real world example from LifeOps's User guide: "Umbrella" defined on an issues page and then used bare on the sessions page reads fine top-to-bottom but breaks for someone skimming; the fix is "umbrella issue" plus a link to the definition. Review lens: read every page as if the reader arrived on it cold.
+- A real example, from the LifeOps guides: an *umbrella issue* — a parent GitHub issue that holds a feature's sub-issues — is defined on the issue-process page, then used bare on the sessions page. It reads fine top to bottom, and breaks for someone who skims straight into the sessions page cold. The fix is to write "umbrella issue" with a link back to its definition every place it appears. Review lens: read every page as if the reader arrived on it cold.
 
 ## Validate sentences by their JOB, not against a blacklist
 
