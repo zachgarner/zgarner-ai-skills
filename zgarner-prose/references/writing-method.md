@@ -27,7 +27,17 @@ Zach: "Many things i've told you come down to this rule." That was Zach summariz
 
 ## Validate sentences by their JOB
 
-Label every sentence by the job it does. The jobs are claim, fact, consequence, pointer, gloss, and instruction. Then check two things.
+Label every sentence by the job it does:
+
+- A **claim** asserts the section's point.
+- A **fact** states something checkable.
+- A **consequence** follows from a fact.
+- A **pointer** points to where something is defined or resolved.
+- A **gloss** defines a term where it appears.
+- An **instruction** tells the reader to do something.
+- A **deliverable** is the concrete result a section produces.
+
+Then check two things.
 
 1. **The label fits the position.** A section opens with a claim. A body sentence is a fact or a consequence. A closer is a deliverable or a pointer.
 2. **The content fills the label.** A claim actually claims the section's point. A fact is checkable.
