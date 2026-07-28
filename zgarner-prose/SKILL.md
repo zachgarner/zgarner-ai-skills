@@ -19,6 +19,7 @@ Label every sentence's job (claim / fact / consequence / pointer / gloss / instr
 His shorthand for prose problems. When he says one of these, he's naming a specific failure, not venting — match it to the entry and fix that. When he coins a new one, codify it here, in the reference, and in the linter the same day.
 
 - **skeeze** (also "AI skeeze," "skeezy") — performed or salesy prose of any kind: writing that announces, impresses, or sells instead of informing. His most-used tag.
+- **grandstanding** — announcing a thing's importance before, or instead of, delivering it: "We built the artifact every later notebook reads." Say what you did, then contextualize. His words for the feeling it gives: "just fucking annoying waste of reading."
 - **sandwich** — a verdict, a whispered justification, and a consequence stapled together with dashes: "Memory is easy here — inference keeps no gradients — so each actor runs large batches." Delete the verdict, promote the evidence, keep the consequence.
 - **dash inventory** — a finished sentence with a parts list stapled on after a dash. Cut it or promote it to its own sentence; never let it dangle.
 - **blah blah blah** — the sentence's shape is noise; the words fill a slot instead of carrying a point. His parody of the punctuation pile: "BLAH BLAH BLAH BLAH: BLAH, BLAH( BLAH BLAH); BLAH."
