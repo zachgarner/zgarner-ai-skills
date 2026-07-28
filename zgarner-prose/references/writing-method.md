@@ -25,14 +25,14 @@ Zach: "Many things i've told you come down to this rule." That was Zach summariz
 - A real example, from the LifeOps guides: an *umbrella issue* is a parent GitHub issue that holds a feature's sub-issues. The guide defines it on the issue-process page, then uses it bare on the sessions page. It reads fine as an epic read from top to bottom, but breaks down for someone who skims straight into the sessions page cold. The fix is to write "umbrella issue" with a link back to its definition every place it appears. Review lens: read every page as if the reader arrived on it cold.
 - Knowing what is jargon and what is established-knowledge is hard, and depends on the expected persona of the reader. Regardless, some basic rules make sense. A common problem to avoid is referring to a generic thing in a specific way. Such as an "umbrella" issue.
 
-## Validate sentences by their JOB, not against a blacklist
+## Validate sentences by their JOB
 
 Label every sentence by the job it does. The jobs are claim, fact, consequence, pointer, gloss, and instruction. Then check two things.
 
 1. **The label fits the position.** A section opens with a claim. A body sentence is a fact or a consequence. A closer is a deliverable or a pointer.
 2. **The content fills the label.** A claim actually claims the section's point. A fact is checkable.
 
-A sentence that takes no label has no job. Cut it. This beats scanning a list of banned patterns. A sentence can dodge every banned pattern and still be empty. The patterns are the common ways a sentence fakes a job. A sandwich is a verdict posing as a fact. A dash inventory is detail posing as part of a claim. A grandstand is importance posing as content. Label first. The pattern list is only cleanup. Zach: "is that why you dont validate your sentences?"
+A sentence that takes no label has no job. Cut it. A sentence can also have the right label and still be empty. The common ways a sentence fakes its job have names. A sandwich is a verdict posing as a fact. A dash inventory is detail posing as part of a claim. A grandstand is importance posing as content. Label first. Those patterns are only the cleanup pass. Zach: "is that why you dont validate your sentences?"
 
 ## First and last sentences are power positions
 
