@@ -1,6 +1,5 @@
 # Zach Garner's writing method — general technical prose
-
-This is the general half of a two-skill pair: everything here applies to any technical writing an engineer reads — notebooks, docs, decks, emails, chat replies, code comments. The template-specific half (notebook structure, Ray visibility, the src/ boundary, outputs) is the `zgarner-fieldeng-template` skill, which requires this one. Built sentence-by-sentence in review with Zach (July 2026); quotes and dates are the provenance. The companion tool is `scripts/prose_lint.py`.
+This skill attempts to codify Zach Garner's technical writing to condition Claude models to correctly create written prose in his voice. There are general rules, a mechanical "prose_lint" which uses basic search patterns to identify cliched writing from claude, and a sentence-by-sentence review that classifies each sentence's role or type within the overall structure of the page.
 
 ---
 
