@@ -102,7 +102,7 @@ Defines the new thing **by analogy to a known thing, in one breath** — no form
 - **The announced contrast** — "the same idea, with one big difference," "here's the catch." Put the two facts adjacent and let them differ.
 - **The announce-colon** — a content-free label staged before the payload: "Perplexity is the number to watch: …" → "Perplexity measures how many tokens the model is choosing between." Test the left half alone: if it taught nothing, delete it.
 - **Editorializing titles** — "Class imbalance — and why we don't report plain accuracy" → "How we measure performance."
-- **Raising a concept only to dismiss it**, sneakiest as the **negative opener**: demolishing a thing no one proposed ("accuracy is a useless score…", "this never needs a GPU…"). Open with what we do; dismiss nothing.
+- **Raising a concept only to dismiss it**, sneakiest as the **negative opener**: demolishing a thing no one proposed ("accuracy is a useless score…", "this never needs a GPU…"). Open with what we do; dismiss nothing. This is the **backfire effect**. Arguing against a thing the reader was not considering plants it in their head, and can make them defend it or distrust you (Zach, Jul 2026, after a title that said "not against a blacklist" did exactly that).
 - **Filler connectives** — "it's worth noting that," "drives the rest of the series," "the operationally meaningful number."
 - **`**Label**:` bullet lists** — every item a bold noun + colon. Write sentences.
 - **Naming a term then waving at it** — name the real term AND gloss it concretely, not with more abstraction.
