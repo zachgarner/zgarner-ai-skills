@@ -25,6 +25,14 @@ Zach: "Many things i've told you come down to this rule." That was Zach summariz
 - A real example, from the LifeOps guides: an *umbrella issue* is a parent GitHub issue that holds a feature's sub-issues. The guide defines it on the issue-process page, then uses it bare on the sessions page. It reads fine as an epic read from top to bottom, but breaks down for someone who skims straight into the sessions page cold. The fix is to write "umbrella issue" with a link back to its definition every place it appears. Review lens: read every page as if the reader arrived on it cold.
 - Knowing what is jargon and what is established-knowledge is hard, and depends on the expected persona of the reader. Regardless, some basic rules make sense. A common problem to avoid is referring to a generic thing in a specific way. Such as an "umbrella" issue.
 
+## The promise ledger — make the umbrella principle checkable
+
+Every claim in an opener is a promise the rest of the document owes. Write one line per claim and name the section that pays it off.
+
+The umbrella principle already says forward pointers are commitments. The ledger is how you audit them instead of trusting the feel of the draft: list the opener's claims in a column, put the delivering section beside each one, and look at the blanks. A claim with no payoff either gets cut or gets the section built for it. A section that pays off nothing in the ledger is content the opener never promised, which is its own finding.
+
+This matters most where the opener is doing sales work and the support is physically elsewhere — a landing-page hero, a README's first screen, an abstract. See the CTA-terminated counter-rules in Part 6.
+
 ## Validate sentences by their JOB
 
 Label every sentence by the job it does:
@@ -51,6 +59,7 @@ The reader's eye lands on the first sentence, the last sentence, and the heading
 - **A power sentence is grounded, active-voice, and states the point.** It's bad to open with "We watch two numbers". It is active-voice, but names nothing concrete (which two numbers?) and holds back the point, announcing that content is coming instead of stating it. If it were the only sentence the reader saw, did they learn anything?
 - **The skim test.** A power sentence lands even skimmed. Read only the first few words and the last few words. If the point already landed, it is a power sentence. If you had to read the middle to get it, the point is buried (Zach, Jul 2026).
 - **Truth is not sufficient.** It's bad to open with "Training prints two numbers per epoch". The sentence is literally true, but it inventories the content instead of delivering it. Any opener whose job is counting or listing what follows gets cut.
+- **The opener carries the most SIGNIFICANT thing, not the most structural one** (Zach, Jul 31 2026). A page about a three-tier system was opened with "each one needs the one before it" — grounded, active, true, and a mechanism. Zach: "Do you really thinkg 'each one neeeds the one before it' is the most significant fucking thing to say". How the thing works is rarely what the reader came for. Ask what the reader gets, then say that; the mechanism goes in the body where it explains the claim.
 - **The opener must be the section's claim.** A sentence can be strong and true and still be the wrong opener. It's bad to open with "Embedding cost is linear in the transaction count" when linearity is a side property and the section is about something else. The test is whether the sentence is THE section's claim, not whether it is a strong sentence.
 - **Open with the claim, not the lead-up to it.** The opener is the decision or the point itself. Starting with the tension, the motivation, or the background delays the point, and that is bad even when the sentence reads clean. Move that context to a later sentence.
 - **Close on the strongest concrete fact.** The last sentence is a power position, so it earns its place or it goes. It's bad to end on a minor detail, a because-tail, or an aphorism. A closing line that reads like a code comment belongs in the code, so move it there.
@@ -83,6 +92,16 @@ Repeat A→B→C until one full cycle produces zero changes. Log what each pass 
 
 When the reviewer flags a sentence pattern, the flagged sentence is never the only instance. Fix it, then re-scan the whole document for the same pattern before handing back. Making the reviewer repeat a correction is the fastest way to burn their patience. They are teaching a rule, not editing a line.
 
+## Price every edit in lines
+
+Prose written into a fixed container has a space budget, and the review loop has no concept of one until you give it a number. State the budget before editing, then price each proposed fix in lines.
+
+Every fix costs or saves space. "Split this sentence into two" is correct by the job-label rule and costs a line. Advice handed over without its price can't be acted on, because the writer has to discover the cost after taking the advice. A fix that exceeds the budget has to buy its space from a weaker sentence in the same block, and naming which one is part of the advice.
+
+The case (Aug 4 2026, Cognizant Coaching hero): the block had to clear the fold on a 390px phone, and the review proposed splitting a two-job sentence without noting the line it cost on exactly the screen the whole review was about.
+
+Applies wherever the container is fixed rather than the content: web copy above the fold, slides, a README's first screen, an issue title that gets read aloud.
+
 ## Run `prose_lint.py` before every hand-back
 
 `scripts/prose_lint.py <file.ipynb>` greps markdown and code comments for the mechanical tells. Zero hits or fix them. It cannot judge positions or altitude. The written audit still runs by hand.
@@ -102,7 +121,7 @@ Defines the new thing **by analogy to a known thing, in one breath** — no form
 - **Action tone: lead with the task, not a description** (instructional writing). "The 80/10/10 boundaries are positions in time…" is documentation; "We need two dates: the day by which 80% of all transactions have happened…" is someone teaching. Open steps with *We need / We do / Now we*; the mechanism arrives as the way we do the thing, never as the subject.
 - **The general engineer's level: the real word, then its plain meaning.** Textbook-speak fails ("Grouping is bound by data movement" — Zach: "is that like a bowel movement?"); dumbed-down fails too ("Grouping is hard" — easy/difficult carry no information; "plain doesn't mean dumbed down"). Target the claim an engineer would state at a whiteboard: term of art introduced in passing, concrete resource named, magnitude attached. "Grouping is limited by how fast you can move data around … nearly every row travels across the cluster network (data engineers call this a shuffle) … gigabytes here, terabytes at production scale."
 - **Connect the logical chain — no gap between goal and mechanism.** Goal → what that requires → the operation that provides it. If the reader could ask "what does that have to do with it?", the link is missing.
-- **One word per concept, held for the whole document.** Never "parts" in one place and "splits" in another; never "sequences" in output when the prose says "windows."
+- **One word per concept, held for the whole document.** Never "parts" in one place and "splits" in another; never "sequences" in output when the prose says "windows." **Census the nouns to check it** rather than trusting recall: list every noun the document uses for the same object, and more than one is the finding. `prose_lint.py --nouns` produces the list mechanically. A reader who meets two names for one thing cannot tell whether it is one thing or two, and that ambiguity costs more in short copy than in long, because there is no later paragraph to resolve it. Live case (Aug 4 2026): a website hero called one product "the system," "a toolset," and "the LifeOps app" in three consecutive paragraphs.
 - **Define by carving a boundary.** A definition that gives only the positive, with no line against the nearest neighbor, is distinctions without differences (Zach, Jul 2026). To define a term, say what it is and what separates it from the thing it sits closest to. You cannot define the positive without the negative.
 - **Define at the moment of understanding — never by forward reference.** Gloss a term in the sentence right after the reader has just understood the thing it names ("…the difference between its guess and the real token is the training signal. This is what makes the model *causal*: every prediction uses only the past."). Pointing at output that hasn't happened yet was rejected: "it's weird to explain something in the future."
 - **The buried-verb cleft: "is what makes" hides the action** (Zach, Jul 2026: "a common thing i flag"). "Matching their setup is what makes these numbers directly comparable" → his rewrite: "Matching their setup allows us to directly compare our results to NVIDIA's published results." When an actor could do the verb, give it the verb. The cleft survives only as a definitional gloss naming a property the reader just saw ("This is what makes the model *causal*: every prediction uses only the past").
@@ -128,6 +147,9 @@ Defines the new thing **by analogy to a known thing, in one breath** — no form
 - **Editorializing titles** — "Class imbalance — and why we don't report plain accuracy" → "How we measure performance."
 - **Raising a concept only to dismiss it**, sneakiest as the **negative opener**: demolishing a thing no one proposed ("accuracy is a useless score…", "this never needs a GPU…"). Open with what we do; dismiss nothing. This is the **backfire effect**. Arguing against a thing the reader was not considering plants it in their head, and can make them defend it or distrust you (Zach, Jul 2026, after a title that said "not against a blacklist" did exactly that).
 - **Say the positive, then clearly label the negative.** State what IS first. When you then need the contrast, mark it as a negative out loud. "It's bad to say X" reads clean. A bare "not X" resonates negative even when X is good, so "not just active voice" reads as "not active voice" though active voice is required. And leading with a bad example, then revealing "that was skeeze" at the end, plants it as good before it yanks it back (Zach, Jul 2026).
+- **Pre-emptive reassurance** — selling a benefit that answers an objection the reader had not raised. A headline reading "works on day one **by yourself**" defends against a worry about dependence, and Zach's read was that it "put the idea in the readers mind that somethings wrong here" (Jul 31 2026). Kin to the backfire effect, and harder to spot because the sentence is affirmative and sounds like a feature. It matters most in power positions, where the reader has no context yet to discount it. It hides inside ordinary capability claims too: "LifeOps works from day one" was the second draft of the same failure, and Zach's read was "SERIOUSLY WHY WOULDNT IT WORK FROM DAY ONE. ARE YOU SUGGESTING IT USED TO BE BROKEN??" (Jul 31 2026). Test any capability claim by asking who doubted it. If nobody did, asserting it invents the doubt. If a later section covers the point, let it.
+- **The echo** — a body sentence repeating the opener's verb, so it carries nothing new. "Core takes whatever you say and keeps it" followed by "The journal takes what you say" (Zach flagged the second one bare: "takes what you say", Jul 31 2026). The opener owns the general statement, so each body sentence has to add its own fact. When they collide, cut the general half out of the opener or give the body sentence a different job.
+- **The parts count** — opening a description by counting its pieces: "Core is four screens." Zach: "NO ONE GIVES A SHIT HOW MANY SCREENS" (Jul 31 2026). The count is not the information, and the sentence delays the four facts that are. Cut it and let the parts speak; the reader can count.
 - **Filler connectives** — "it's worth noting that," "drives the rest of the series," "the operationally meaningful number."
 - **`**Label**:` bullet lists** — every item a bold noun + colon. Write sentences.
 - **Naming a term then waving at it** — name the real term AND gloss it concretely, not with more abstraction.
@@ -137,7 +159,7 @@ Defines the new thing **by analogy to a known thing, in one breath** — no form
 - **Earned punctuation.** Every em-dash, colon, and especially every semicolon must be earned (Zach, Jul 2026). Most are two sentences forced into one. A sentence with more than one of these marks is usually a punctuation pile. Split it. Default to the period. Reach for a mark only when the plain two-sentence version loses something real. This is the mechanical guard against flowery prose. The linter flags every semicolon and every doubled mark.
 - **The dash-aside sandwich: verdict — whispered justification — consequence.** "Memory is easy here — inference keeps no gradients or optimizer state — so each actor runs large batches." Delete the verdict, promote the evidence, keep the consequence. Zach's correction word: **"sandwich."**
 - **The dash inventory: a finished sentence with a parts list stapled on** ("…wrote the results to shared storage — `embed_`, `lbl_`, and `raw_` files per split."). Cut or promote, never dangle; in first position it buries the power sentence.
-- **The punctuation pile** — a sentence needing a colon, a parenthetical, AND a semicolon is several sentences pretending to be one. Zach's parody: "BLAH BLAH BLAH BLAH: BLAH, BLAH( BLAH BLAH); BLAH."
+- **The punctuation pile** — a sentence needing a colon, a parenthetical, AND a semicolon is several sentences pretending to be one. Zach's parody: "BLAH BLAH BLAH BLAH: BLAH, BLAH( BLAH BLAH); BLAH." A live instance, Jul 31 2026 — "Core takes whatever you say, in the state you are in: a voice note on a walk, a paragraph at midnight, three words between meetings" — two commas, a colon, then a three-item triad. Zach: "this is a nightmare of punctuation". The evocative triad is its own habit: three parallel images tuned for rhythm read as showing off. Two plain sentences replaced it. **Commas separating a plain list are exempt** (Zach, Jul 31 2026: "The exception is if youre just listing 1, 2 and 3"). "Mine tracks what I eat, what I spend, the weather I shoot in, and what I want to remember" carries three commas and is one list doing one job. The pile is MIXED marks doing structural work, several sentences forced into one. Count the marks that change the sentence's structure, not the ones separating items.
 - **The because-tail** — "X happens, because [long clause]." as a closer. Two direct sentences.
 - **Notation-as-prose** — "`<bos>` + the 12 field tokens + `<eos>`" is not a sentence. Say it in English; the symbolic form lives in code and comments only.
 - **Verbless fragments as sentences.** Give it a verb.
@@ -181,11 +203,21 @@ Don't claim the product shines where it's undifferentiated — and don't volunte
 # Part 6 — Counter-rules: where the rules do NOT apply
 
 - **Negation is allowed when the absence is the point** ("fraud labels play no part in this step"). State the affirmative fact first when one exists.
+- **A comma-separated list is not a punctuation pile.** Three or four commas separating items is one sentence doing one job. Only mixed structural marks (colon plus comma plus semicolon plus parenthetical) make a pile.
 - **A colon survives when its left half is content** (Zach's own: "This job has two main steps: grouping the rows by card, then tokenizing each card.").
 - **A term of art survives when the plain phrase loses information** — then it MUST be glossed at first use.
 - **A power sentence fails if it is the wrong claim** — strength of form never substitutes for being the point.
 - **No rule endorses em-dash asides.** An earlier note here said one aside per paragraph is acceptable — that was inferred by Claude, never stated, and Zach revoked it (Jul 2026: "when did i say to use asides??"). A dash survives only under the earned-punctuation bar, and in his register that is rare. Two in one sentence is always a sandwich.
 - **Rhetorical questions in body prose: unresolved** — question titles are banned; body questions have been avoided rather than ruled on. *(Inferred.)*
+
+## CTA-terminated copy (landing pages, marketing sites)
+
+The rules get MORE applicable in sales copy, not less. Skeeze, grandstanding, curator phrases, movie-preview lines, the announced contrast, and pre-emptive reassurance are all sales tics that leaked into technical writing, so pointing the method at actual sales copy aims it at the source. Marketing is where those instincts feel normal, which is exactly why they survive there unexamined. Two rules genuinely change shape, and only two.
+
+- **The closer is the button, not the last sentence.** The power-position rule puts the reader's eye on the final sentence. When a block ends in a call to action, the eye's last stop is the button, so the final sentence's job is handoff. A plain pointer that hands off cleanly beats a sentence composed to conclude, and auditing that sentence as a closer generates false findings (Aug 4 2026: "This is Cognizant Coaching, and the LifeOps app" was faulted for a weak conjunction while doing its actual job, pointing at Get Started, correctly).
+- **A hero's claims are supported below the fold, not in place.** The job rule says a claim is contestable and needs support. An opening claim on a landing page structurally cannot carry its own support, and demanding it produces bloat. The check inverts: verify the page pays the claim off further down, using the promise ledger from Part 1, instead of asking the sentence to defend itself.
+
+Rejected as a candidate exception: exempting a field's native vocabulary from the jargon-stack rule on the grounds that insider words filter for the right reader. Filtering is real, but the opener already does it by naming the audience, and stacked abstractions still leave the reader picturing nothing. The rule stands.
 
 ---
 
@@ -195,5 +227,8 @@ Don't claim the product shines where it's undifferentiated — and don't volunte
 - [ ] Openers are the section's claim — the RIGHT claim; closers deserve the position.
 - [ ] Action tone; affirmative default; one word per concept; no chain gaps; terms glossed at the moment of understanding.
 - [ ] Every shape/magnitude/difficulty claim computed or verified; every number real.
+- [ ] Noun census run — one noun per object, held across the whole document.
+- [ ] Promise ledger written — every opener claim mapped to the section that pays it off.
+- [ ] Space budget stated before editing, and every proposed fix priced in lines.
 - [ ] Review loop A/B/C ran to fixpoint with the written audit; `prose_lint.py` ran clean.
 - [ ] After any reviewer correction: the whole document swept for the pattern before handing back.

@@ -2,6 +2,9 @@
 """Grep a document's markdown and code comments for the mechanical voice tells.
 
 Usage: python prose_lint.py <notebook.ipynb> [...]
+       python prose_lint.py --openers <file.html>
+       python prose_lint.py --nouns <file> [noun,noun,...]
+       python prose_lint.py --imports <notebook.ipynb>
 
 Catches the recurring, greppable violations from notebook-authoring.md. It cannot
 judge openers or altitude — the written opener audit still runs by hand — but it
@@ -10,6 +13,7 @@ catches the patterns that keep leaking back. Zero exit = no hits.
 import json
 import re
 import sys
+from html import unescape
 
 RULES = [
     # (name, regex, applies_to)  applies_to: md, comment, or both
@@ -215,7 +219,89 @@ def audit_notebook(nb_path):
     print(f"\n# {n} sentences — every row gets a label and a verdict before hand-back.")
 
 
+# Nouns writers reach for when naming the thing they built. The census reports
+# which of them a document uses; deciding whether two of them name ONE object is
+# the reviewer's call, not the script's.
+PRODUCT_NOUNS = [
+    "system", "app", "application", "platform", "tool", "toolset", "toolkit",
+    "product", "service", "framework", "engine", "suite", "solution", "software",
+    "stack", "program",
+]
+
+
+def extract_lines(path):
+    """Yield (loc, text) for the prose in a notebook, an HTML/handlebars page, or
+    a plain markdown file, so the census reads the same document a reader sees."""
+    if path.endswith(".ipynb"):
+        nb = json.load(open(path))
+        for c in nb.get("cells", []):
+            if c.get("cell_type") != "markdown":
+                continue
+            src = "".join(c.get("source", []))
+            for ln, line in enumerate(src.splitlines(), 1):
+                yield f"cell={c.get('id', '?')} md:{ln}", line
+    elif path.endswith((".html", ".htm", ".hbs")):
+        raw = open(path).read()
+        # Drop script/style bodies, then break on block tags so one visible
+        # paragraph stays one line, then strip what is left.
+        raw = re.sub(r"(?is)<(script|style)\b.*?</\1>", " ", raw)
+        raw = re.sub(r"(?i)</?(p|div|section|li|h[1-6]|br|tr|blockquote)\b[^>]*>", "\n", raw)
+        raw = unescape(re.sub(r"<[^>]+>", " ", raw))
+        for ln, line in enumerate(raw.splitlines(), 1):
+            if line.strip():
+                yield f"line:{ln}", " ".join(line.split())
+    else:
+        for ln, line in enumerate(open(path).read().splitlines(), 1):
+            yield f"line:{ln}", line
+
+
+def noun_census(path, terms=None):
+    """List every noun the document uses for the thing it describes. More than one
+    is the finding: a reader who meets two names for one object cannot tell whether
+    it is one object or two. Usage: prose_lint.py --nouns <file> [noun,noun,...]
+
+    Returns the number of distinct nouns found, so >1 is a non-zero exit.
+    """
+    terms = terms or PRODUCT_NOUNS
+    found = {}
+    for loc, line in extract_lines(path):
+        for t in terms:
+            if re.search(rf"\b{re.escape(t)}s?\b", line, re.I):
+                found.setdefault(t, []).append((loc, line.strip()[:80]))
+    print(f"# NOUN CENSUS — {path}")
+    if not found:
+        print("no product nouns found\n")
+        return 0
+    for t in sorted(found, key=lambda t: -len(found[t])):
+        locs = found[t]
+        print(f"{t:<12} {len(locs)}x  {', '.join(l for l, _ in locs[:6])}")
+        for _, text in locs[:2]:
+            print(f"{'':<12}    {text}")
+    print()
+    if len(found) > 1:
+        print(f"=> {len(found)} distinct nouns: {', '.join(sorted(found))}")
+        print("   Confirm whether they name the SAME object. If they do, pick one "
+              "and hold it.")
+    else:
+        print("=> one noun, held. ")
+    print()
+    return len(found)
+
+
 def main(paths):
+    if paths and paths[0] == "--nouns":
+        if len(paths) < 2:
+            print(__doc__)
+            return 2
+        # A trailing comma-separated list overrides the default vocabulary.
+        args = paths[1:]
+        terms = None
+        if len(args) > 1 and "," in args[-1] and "." not in args[-1]:
+            terms = [t.strip() for t in args.pop().split(",") if t.strip()]
+        worst = 0
+        for p in args:
+            worst = max(worst, noun_census(p, terms))
+        return 1 if worst > 1 else 0
     if paths and paths[0] == "--imports":
         for p in paths[1:]:
             audit_imports(p)
