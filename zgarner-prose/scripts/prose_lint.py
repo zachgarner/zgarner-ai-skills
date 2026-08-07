@@ -22,6 +22,10 @@ RULES = [
         r"lands? (as|in|on)|comes? home|breathes?|wants? to)\b", re.I), "both"),
     ("banned-term", re.compile(
         r"\b(corpus|smoke test|smoke run|de-facto|payoff|skeeze|full stop|upstream|downstream)\b", re.I), "md"),
+    # Unsayable (Zach, Aug 7 2026): words that fail said aloud — a mouthful
+    # ("adjudication") or gross by connotation ("messy tail"). Escalation is fine.
+    ("unsayable", re.compile(
+        r"\b(adjudicat\w*|messy tail)\b", re.I), "both"),
     ("fm-abbrev", re.compile(r"(?<![`/\w])fm(?![`\w])"), "md"),
     ("movie-preview", re.compile(
         r"\b(the one (line|knob|thing)|that's (all|it) it takes|is all it takes|"
