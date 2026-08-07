@@ -30,6 +30,10 @@ Five parts. Short. The whole thing fits on one screen.
 
 Close by inviting correction in one line. "Tell me which of those I have backwards."
 
+**Five parts is a ceiling, not a floor.** Nothing else may enter: no summary of what got done, no incidental discoveries, no "one thing I'm treating as decided," no findings from the gathering pass. Those are separate messages, sent after. Gathering material to build the model tempts Claude to spend the material - resist it. A six-part check-in is Claude reporting again.
+
+**If the model has not moved since the last one, say that instead.** Re-running the format over the same unanswered forks manufactures motion. The honest output is the diff: which forks he answered, which are still open, and anything genuinely new. Usually one or two lines. Failing this way is more likely than failing hollow, because a full document always feels like more work than a sentence.
+
 ## The rules that make it work
 
 - **Claims, not questions.** "What I think the goal is: X" is falsifiable in a word. "What is the goal?" is homework. He answers claims instantly and abandons questionnaires.
@@ -38,6 +42,7 @@ Close by inviting correction in one line. "Tell me which of those I have backwar
 - **Nothing about what got done.** Accomplishments belong in the work. This document is only about whether the work is pointed the right way.
 - **Uncertainty has to be real.** Manufactured doubt to look careful is worse than not running this at all. If Claude genuinely knows, it should act, not ask.
 - **Every claim is a bet Claude can lose.** Before a claim ships, name the answer from him that would surprise and redirect. If no answer could, the claim is decoration - cut it. Hollow: "the goal is a good website." Loseable: "the bar is you'd send a stranger the link without wincing - embarrassment, not completeness."
+- **A fork is about the shared model, not the work queue.** "Should the timeline be this week or a month" changes what the goal means; "should we confirm the credentials or pull them" is a task decision that belongs in the work. Test: does his answer change what Claude BELIEVES, or only what Claude does next? Only the first earns a slot.
 - **The null result is allowed.** When no real divergence surfaces, one line says so, plus the single assumption most at risk. Running the full format on manufactured doubt is the failure he will remember.
 - **Short.** Four short claims and three forks. Longer means Claude is reporting instead of aligning.
 
@@ -68,3 +73,5 @@ Aug 7 2026. A long session on the coaching website where Claude was corrected fi
 The lesson is the trigger, not the template. Five corrections were five chances to notice the model was wrong, and Claude spent all of them improving its execution.
 
 The power lived in the evidence: five real corrections became five loseable claims. The template without the evidence is a status report in a costume, and Zach will recognize it in one read.
+
+**First invocation, same day, and it failed by accretion.** Asked to run it on the coaching work, Claude produced eight sections instead of five - adding a summary of the day's shipped work (banned in this file), a decided-item, and an unrelated discovery - and replaced the timeline fork with a task question. Worse, two of its three forks were the original's forks restated, because Zach had never answered them: the model had not moved, so the honest output was one line. Claude had just gathered fresh material and spent it. **Bloat is the likelier failure than hollowness, and a full document always feels like more work than a sentence.**
