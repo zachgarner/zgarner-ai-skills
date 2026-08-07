@@ -112,6 +112,7 @@ What the reader does next, in words they already own. No class names, no magic n
 
 - **Detail survives in code that dies in prose** — banned from concept bullets and takeaways, mandatory at its line in the code.
 - **[Ray][verb] is correct when Ray is truly the actor** — don't demote the platform from subject position in a Ray workshop.
+- **Ray visibility governs ALL prose, not only notebooks** (Zach, Aug 7 2026: "We are selling ray. do not hide ray"). Plans, issues, chat, and runbooks name Ray Serve, Ray Train, Ray Data as the actor; an API symbol (`LLMConfig`, `build_openai_app`) never substitutes for the product name. "Wrap it in LLMConfig + build_openai_app" hid that the whole stack was Ray Serve + vLLM and read as if Ray wasn't being used.
 - *(Unconfirmed, inferred from acceptance)*: autoscaler node-arrival lines are worth keeping in committed outputs; the NVIDIA punchline survives in takeaways when the facts deliver it; tables are the preferred Scaling-factors body; known linter backlog in closed pages (nb01 "the pretrain corpus"; ~11 hits in nb02/nb03, several in his own approved text) awaits his call.
 
 # The checklist (template layer — run the zgarner-prose checklist too)
