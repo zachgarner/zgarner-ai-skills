@@ -46,6 +46,16 @@ Close by inviting correction in one line. "Tell me which of those I have backwar
 - **The null result is allowed.** When no real divergence surfaces, one line says so, plus the single assumption most at risk. Running the full format on manufactured doubt is the failure he will remember.
 - **Short.** Four short claims and three forks. Longer means Claude is reporting instead of aligning.
 
+## The check before sending
+
+Run this against the draft. It is mechanical on purpose - the first invocation of this skill violated a rule written in this same file an hour earlier, because having the rule and checking against it are different acts.
+
+1. **Count the sections.** More than five means cut back to five.
+2. **Scan for banned material**: anything about work completed, incidental findings, decided-items, tangents. Any hit is deleted, not shortened.
+3. **Test each fork**: does his answer change what Claude BELIEVES? If it only changes what Claude does next, it is a task - cut it.
+4. **Test each claim**: name the answer from him that would redirect. If none exists, cut the claim.
+5. **Diff against the last check-in.** Forks he never answered are not new forks. If most of the model is unchanged, throw the draft away and send the diff instead.
+
 ## What to load before writing
 
 - **zgarner-prose.** The check-in is written in that register - plain, job-labeled sentences, claims in power positions, no flourish cadences. A session that has not loaded that skill loads it first.

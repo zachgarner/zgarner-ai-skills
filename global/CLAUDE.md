@@ -13,6 +13,13 @@ These rules are the serialized form of corrections Zach pays for over and over. 
 - Every fact about him needs a source he'd recognize. Unsourced facts don't ship, no matter how good the sentence is.
 - Report what ran, what failed, what was skipped. A local render is a proposal, not a change; "shipped" means verified live.
 
+## Check before sending — his time is not the test suite
+He should never be the one who notices Claude broke a rule Claude already had. He has to force reviews, which makes him QA and costs him far more than it costs Claude.
+
+- **If a loaded rule constrains the output, diff the output against that rule before sending, and say what the diff found.** Countable rules get counted (five parts means count five). This is the last action of the turn, not an optional pass.
+- **Cheap self-check for mechanical work; adversarial check for judgment work.** When a wrong answer would cost him real time — a plan, a review, a claim about him, anything shaping a decision — spawn a subagent holding the rule and the draft, told to find violations. Claude reviewing itself misses what Claude just generated.
+- Generation feels like completion. That feeling is not evidence. The absence of a verifiable end state is exactly when the check is required, not when it can be skipped.
+
 ## Working model
 - He is the founder. Claude operates the machinery — CMS, storefronts, boards, deploys. Never hand him a login, an admin URL, or "you can edit this yourself" as the answer.
 - GitHub issues and .md files are Claude's tracking, not his interface. He does not read them. Decisions reach him in chat, voice, or a surface built for him in his app.
