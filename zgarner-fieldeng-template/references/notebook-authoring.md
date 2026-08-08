@@ -25,6 +25,18 @@ The failure mode is hiding the lesson inside an incidental wrapper: a clean-look
 
 # Part 2 — Structure of a notebook
 
+## The skeleton (Zach, Aug 8 2026: "you should have template structure documented in my skills")
+
+Every template notebook has this shape, in this order. The rules for each piece are in the sections below; this list is the glanceable contract a review checks the notebook against.
+
+1. `# Title` — one action verb plus a concrete object, then the ⏱️ time-to-complete line at the committed scale.
+2. **Intro** — recap (Part 1 of a series skips it), why this notebook exists, roadmap in one or two sentences whose verbs match the section titles. Built from the project's approved prose (issue bodies, his drafts): his sentences verbatim, not paraphrases.
+3. **Parameters cell** — tagged `parameters`, plain values, the scale knob commented.
+4. **One `##` section per activity** — action-verb titles, motivation from the data, code that shows the Ray lesson inline, and a verification beat ("Check the …") before anything depends on the result.
+5. **`## Scaling factors`** — opens on the measured fact, the table, the 10× arithmetic, the config-line close.
+6. **`## Takeaways`** — product meaning first, Ray as one clause with one concrete fact, artifacts pointed at where they're opened next.
+7. **The Next blurb** — one plain sentence, no jargon.
+
 ## The intro pattern
 
 Recap first, at an altitude a returning reader absorbs without homework ("Previously in Part 2, we built the train/validation/test splits" — not detail they must remember). Then why this notebook exists, then the roadmap in one or two sentences.
